@@ -4,7 +4,10 @@ import { ColorsWrapper } from "./styled";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
-  title: "Theme|Colors",
+  title: "Theme|Basic/Colors",
+  parameters: {
+    componentSubtitle: "Button component",
+  },
   component: Colors,
 };
 
