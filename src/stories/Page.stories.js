@@ -1,10 +1,11 @@
-import React from 'react';
+import React from "react";
 
-import { Page } from './Page';
-import * as HeaderStories from './Header.stories';
+import { Page } from "./Page";
+import * as HeaderStories from "./Header.stories";
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
-  title: 'Example/Page',
+  title: "Example/Page",
   component: Page,
 };
 
