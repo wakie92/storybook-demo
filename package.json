@@ -1,6 +1,6 @@
 {
   "name": "storybook-demo-wakie92",
-  "version": "0.1.0",
+  "version": "0.1.5",
   "description": "Starter template to get up and running quickly with React and Storybook",
   "module": "dist/index.js",
   "author": "Chromatic <https://chromatic.com/>",
@@ -11,6 +11,9 @@
   "bugs": {
     "url": "https://github.com/chromaui/intro-storybook-react-template/issues"
   },
+  "files": [
+    "/dist"
+  ],
   "license": "MIT",
   "peerDependencies": {
     "@testing-library/jest-dom": "^5.11.4",
