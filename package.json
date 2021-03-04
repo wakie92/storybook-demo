@@ -1,7 +1,8 @@
 {
-  "name": "intro-storybook-react-template",
+  "name": "storybook-demo-wakie92",
   "version": "0.1.0",
   "description": "Starter template to get up and running quickly with React and Storybook",
+  "module": "dist/index.js",
   "author": "Chromatic <https://chromatic.com/>",
   "repository": {
     "type": "git",
@@ -11,8 +12,7 @@
     "url": "https://github.com/chromaui/intro-storybook-react-template/issues"
   },
   "license": "MIT",
-  "private": true,
-  "dependencies": {
+  "peerDependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -26,7 +26,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "rollup -c",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
@@ -58,6 +58,13 @@
     "@storybook/node-logger": "^6.1.15",
     "@storybook/preset-create-react-app": "^3.1.5",
     "@storybook/react": "^6.1.15",
-    "chromatic": "^5.6.3"
+    "@svgr/rollup": "^5.5.0",
+    "chromatic": "^5.6.3",
+    "rollup": "^2.40.0",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-url": "^3.0.1"
   }
 }
