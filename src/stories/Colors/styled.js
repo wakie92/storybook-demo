@@ -9,7 +9,7 @@ export const ColorCard = styled.div`
 
 export const ColorDiv = styled.div`
   background-color: ${({ bgColor }) => bgColor};
-  width: 100px;
+  width: 98px;
   height: 25px;
 `;
 
