@@ -1,42 +1,42 @@
-import { withKnobs, text, select, boolean } from "@storybook/addon-knobs";
+import { withKnobs, text, select, boolean } from '@storybook/addon-knobs';
 
-import BulldaxButton from "./BulldaxButton";
-import ButtonGroup from "../ButtonGroup/ButtonGroup";
+import BulldaxButton from './BulldaxButton';
+import ButtonGroup from '../ButtonGroup/ButtonGroup';
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
-  title: "Theme|Basic/BulldaxButton",
+  title: 'Theme|Basic/BulldaxButton',
   parameters: {
-    componentSubtitle: "Button Component",
+    componentSubtitle: 'Button Component',
   },
   decorators: [withKnobs],
   component: BulldaxButton,
 };
 
 export const bulldaxButton = () => {
-  const label = text("children", "BUTTON");
-  const isLoading = boolean("isLoading", false);
+  const label = text('children', 'BUTTON');
+  const isLoading = boolean('isLoading', false);
   const theme = select(
-    "theme",
+    'theme',
     [
-      "black",
-      "black-outline",
-      "red",
-      "red-hanbitco",
-      "red-outline",
-      "primary",
-      "danger",
-      "link",
-      "grey",
-      "blue",
+      'black',
+      'black-outline',
+      'red',
+      'red-hanbitco',
+      'red-outline',
+      'primary',
+      'danger',
+      'link',
+      'grey',
+      'blue',
     ],
-    "primary"
+    'primary',
   );
-  const disabled = boolean("disabled", false);
-  const type = select("type", ["button", "submit", "reset"], "button");
-  const fullWidth = boolean("fullWidth", false);
-  const spinnerSize = select("spinnerSize", ["sm", "md", "lg", "xlg"], "sm");
-  const spinnerType = select("spinnerType", ["border", "grow"], "border");
+  const disabled = boolean('disabled', false);
+  const type = select('type', ['button', 'submit', 'reset'], 'button');
+  const fullWidth = boolean('fullWidth', false);
+  const spinnerSize = select('spinnerSize', ['sm', 'md', 'lg', 'xlg'], 'sm');
+  const spinnerType = select('spinnerType', ['border', 'grow'], 'border');
 
   return (
     <BulldaxButton
@@ -54,80 +54,40 @@ export const bulldaxButton = () => {
 };
 
 bulldaxButton.story = {
-  name: "Default",
+  name: 'Default',
 };
 
 export const collectionOfButtons = () => {
   return (
     <ButtonGroup direction="column">
-      <BulldaxButton
-        fullWidth={false}
-        buttonStyle={" width: 10rem "}
-        theme="black"
-      >
+      <BulldaxButton fullWidth={false} buttonStyle={' width: 10rem '} theme="black">
         BLACK
       </BulldaxButton>
-      <BulldaxButton
-        fullWidth={false}
-        buttonStyle={" width: 10rem "}
-        theme="black-outline"
-      >
+      <BulldaxButton fullWidth={false} buttonStyle={' width: 10rem '} theme="black-outline">
         BLACK_OUTLINE
       </BulldaxButton>
-      <BulldaxButton
-        fullWidth={false}
-        buttonStyle={" width: 10rem "}
-        theme="red"
-      >
+      <BulldaxButton fullWidth={false} buttonStyle={' width: 10rem '} theme="red">
         RED
       </BulldaxButton>
-      <BulldaxButton
-        fullWidth={false}
-        buttonStyle={" width: 10rem "}
-        theme="red-hanbitco"
-      >
+      <BulldaxButton fullWidth={false} buttonStyle={' width: 10rem '} theme="red-hanbitco">
         RED_HANBITCO
       </BulldaxButton>
-      <BulldaxButton
-        fullWidth={false}
-        buttonStyle={" width: 10rem "}
-        theme="red-outline"
-      >
+      <BulldaxButton fullWidth={false} buttonStyle={' width: 10rem '} theme="red-outline">
         RED_OUTLINE
       </BulldaxButton>
-      <BulldaxButton
-        fullWidth={false}
-        buttonStyle={" width: 10rem "}
-        theme="primary"
-      >
+      <BulldaxButton fullWidth={false} buttonStyle={' width: 10rem '} theme="primary">
         PRIMARY
       </BulldaxButton>
-      <BulldaxButton
-        fullWidth={false}
-        buttonStyle={" width: 10rem "}
-        theme="danger"
-      >
+      <BulldaxButton fullWidth={false} buttonStyle={' width: 10rem '} theme="danger">
         DANGER
       </BulldaxButton>
-      <BulldaxButton
-        fullWidth={false}
-        buttonStyle={" width: 10rem "}
-        theme="link"
-      >
+      <BulldaxButton fullWidth={false} buttonStyle={' width: 10rem '} theme="link">
         LINK
       </BulldaxButton>
-      <BulldaxButton
-        fullWidth={false}
-        buttonStyle={" width: 10rem "}
-        theme="grey"
-      >
+      <BulldaxButton fullWidth={false} buttonStyle={' width: 10rem '} theme="grey">
         GREY
       </BulldaxButton>
-      <BulldaxButton
-        fullWidth={false}
-        buttonStyle={" width: 10rem "}
-        theme="blue"
-      >
+      <BulldaxButton fullWidth={false} buttonStyle={' width: 10rem '} theme="blue">
         BLUE
       </BulldaxButton>
     </ButtonGroup>
@@ -137,84 +97,39 @@ export const collectionOfButtons = () => {
 export const collectionOfDisabledButtons = () => {
   return (
     <ButtonGroup direction="column">
-      <BulldaxButton
-        fullWidth={false}
-        buttonStyle={" width: 10rem "}
-        theme="black"
-        disabled
-      >
+      <BulldaxButton fullWidth={false} buttonStyle={' width: 10rem '} theme="black" disabled>
         BLACK
       </BulldaxButton>
       <BulldaxButton
         fullWidth={false}
-        buttonStyle={" width: 10rem "}
+        buttonStyle={' width: 10rem '}
         theme="black-outline"
         disabled
       >
         BLACK_OUTLINE
       </BulldaxButton>
-      <BulldaxButton
-        fullWidth={false}
-        buttonStyle={" width: 10rem "}
-        theme="red"
-        disabled
-      >
+      <BulldaxButton fullWidth={false} buttonStyle={' width: 10rem '} theme="red" disabled>
         RED
       </BulldaxButton>
-      <BulldaxButton
-        fullWidth={false}
-        buttonStyle={" width: 10rem "}
-        theme="red-hanbitco"
-        disabled
-      >
+      <BulldaxButton fullWidth={false} buttonStyle={' width: 10rem '} theme="red-hanbitco" disabled>
         RED_HANBITCO
       </BulldaxButton>
-      <BulldaxButton
-        fullWidth={false}
-        buttonStyle={" width: 10rem "}
-        theme="red-outline"
-        disabled
-      >
+      <BulldaxButton fullWidth={false} buttonStyle={' width: 10rem '} theme="red-outline" disabled>
         RED_OUTLINE
       </BulldaxButton>
-      <BulldaxButton
-        fullWidth={false}
-        buttonStyle={" width: 10rem "}
-        theme="primary"
-        disabled
-      >
+      <BulldaxButton fullWidth={false} buttonStyle={' width: 10rem '} theme="primary" disabled>
         PRIMARY
       </BulldaxButton>
-      <BulldaxButton
-        fullWidth={false}
-        buttonStyle={" width: 10rem "}
-        theme="danger"
-        disabled
-      >
+      <BulldaxButton fullWidth={false} buttonStyle={' width: 10rem '} theme="danger" disabled>
         DANGER
       </BulldaxButton>
-      <BulldaxButton
-        fullWidth={false}
-        buttonStyle={" width: 10rem "}
-        theme="link"
-        disabled
-      >
+      <BulldaxButton fullWidth={false} buttonStyle={' width: 10rem '} theme="link" disabled>
         LINK
       </BulldaxButton>
-      <BulldaxButton
-        fullWidth={false}
-        buttonStyle={" width: 10rem "}
-        theme="grey"
-        disabled
-      >
+      <BulldaxButton fullWidth={false} buttonStyle={' width: 10rem '} theme="grey" disabled>
         GREY
       </BulldaxButton>
-      <BulldaxButton
-        fullWidth={false}
-        buttonStyle={" width: 10rem "}
-        theme="blue"
-        disabled
-      >
+      <BulldaxButton fullWidth={false} buttonStyle={' width: 10rem '} theme="blue" disabled>
         BLUE
       </BulldaxButton>
     </ButtonGroup>
@@ -224,25 +139,13 @@ export const collectionOfDisabledButtons = () => {
 export const customSize = () => {
   return (
     <ButtonGroup direction="column">
-      <BulldaxButton
-        fullWidth={false}
-        buttonStyle={" width: 5rem "}
-        theme="black"
-      >
+      <BulldaxButton fullWidth={false} buttonStyle={' width: 5rem '} theme="black">
         BLACK
       </BulldaxButton>
-      <BulldaxButton
-        fullWidth={false}
-        buttonStyle={" width: 10rem "}
-        theme="black-outline"
-      >
+      <BulldaxButton fullWidth={false} buttonStyle={' width: 10rem '} theme="black-outline">
         BLACK_OUTLINE
       </BulldaxButton>
-      <BulldaxButton
-        fullWidth={false}
-        buttonStyle={" width: 20rem "}
-        theme="red"
-      >
+      <BulldaxButton fullWidth={false} buttonStyle={' width: 20rem '} theme="red">
         RED
       </BulldaxButton>
     </ButtonGroup>
@@ -256,7 +159,7 @@ export const Loading = () => {
       <BulldaxButton
         isLoading
         fullWidth={false}
-        buttonStyle={" width: 20rem "}
+        buttonStyle={' width: 20rem '}
         theme="red"
         spinnerSize="lg"
       >
@@ -265,7 +168,7 @@ export const Loading = () => {
       <BulldaxButton
         isLoading
         fullWidth={false}
-        buttonStyle={" width: 20rem "}
+        buttonStyle={' width: 20rem '}
         theme="red"
         spinnerSize="md"
       >
@@ -274,7 +177,7 @@ export const Loading = () => {
       <BulldaxButton
         isLoading
         fullWidth={false}
-        buttonStyle={" width: 20rem "}
+        buttonStyle={' width: 20rem '}
         theme="red"
         spinnerSize="sm"
       >
@@ -283,7 +186,7 @@ export const Loading = () => {
       <h1>Grow</h1>
       <BulldaxButton
         fullWidth={false}
-        buttonStyle={" width: 5rem "}
+        buttonStyle={' width: 5rem '}
         theme="black"
         isLoading
         spinnerType="grow"
@@ -293,7 +196,7 @@ export const Loading = () => {
       </BulldaxButton>
       <BulldaxButton
         fullWidth={false}
-        buttonStyle={" width: 5rem "}
+        buttonStyle={' width: 5rem '}
         theme="black"
         isLoading
         spinnerType="grow"
@@ -303,7 +206,7 @@ export const Loading = () => {
       </BulldaxButton>
       <BulldaxButton
         fullWidth={false}
-        buttonStyle={" width: 5rem "}
+        buttonStyle={' width: 5rem '}
         theme="black"
         isLoading
         spinnerType="grow"

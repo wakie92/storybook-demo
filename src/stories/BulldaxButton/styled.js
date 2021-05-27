@@ -1,22 +1,22 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
-import { colors } from "../../styles/theme";
+import { colors } from '../../styles/theme';
 
-const fontSize = (props) => {
+const fontSize = props => {
   switch (props.size) {
-    case "sm":
+    case 'sm':
       return css`
         font-size: 12px;
       `;
-    case "md":
+    case 'md':
       return css`
         font-size: 13px;
       `;
-    case "lg":
+    case 'lg':
       return css`
         font-size: 14px;
       `;
-    case "xl":
+    case 'xl':
       return css`
         font-size: 16px;
       `;
@@ -27,21 +27,21 @@ const fontSize = (props) => {
   }
 };
 
-const height = (props) => {
+const height = props => {
   switch (props.size) {
-    case "sm":
+    case 'sm':
       return css`
         min-height: 2.25rem;
       `;
-    case "md":
+    case 'md':
       return css`
         min-height: 2.5rem;
       `;
-    case "lg":
+    case 'lg':
       return css`
         min-height: 2.75rem;
       `;
-    case "xl":
+    case 'xl':
       return css`
         min-height: 3rem;
       `;
@@ -52,16 +52,14 @@ const height = (props) => {
   }
 };
 
-const fullWidth = (props) => (props.fullWidth ? { width: "100%" } : null);
+const fullWidth = props => (props.fullWidth ? { width: '100%' } : null);
 
-const defaultStyle = (props) => {
+const defaultStyle = props => {
   switch (props.theme) {
-    case "black":
+    case 'black':
       return css`
         text-decoration: none;
-        background-color: ${props.disabled
-          ? colors.greyH9c9c9c
-          : colors.blackH212121};
+        background-color: ${props.disabled ? colors.greyH9c9c9c : colors.blackH212121};
         color: ${props.disabled ? colors.greyHd3d3d3 : colors.redHe00c2d};
         transition: 0.2s;
         border: none;
@@ -70,7 +68,7 @@ const defaultStyle = (props) => {
           fill: rgb(255, 255, 255);
         }
       `;
-    case "black-outline":
+    case 'black-outline':
       return css`
         text-decoration: none;
         background-color: transparent;
@@ -78,7 +76,7 @@ const defaultStyle = (props) => {
         color: ${colors.blackH212121};
         transition: 0.2s;
       `;
-    case "red":
+    case 'red':
       return css`
         text-decoration: none;
         background-color: ${colors.redHe01e3c};
@@ -86,7 +84,7 @@ const defaultStyle = (props) => {
         color: ${colors.whiteHfff};
         transition: 0.2s;
       `;
-    case "red-hanbitco":
+    case 'red-hanbitco':
       return css`
         text-decoration: none;
         background-color: ${colors.redHe01e3c};
@@ -94,7 +92,7 @@ const defaultStyle = (props) => {
         color: ${colors.whiteHfff};
         transition: 0.2s;
       `;
-    case "red-outline":
+    case 'red-outline':
       return css`
         text-decoration: none;
         background-color: inherit;
@@ -102,35 +100,35 @@ const defaultStyle = (props) => {
         transition: 0.2s;
         color: ${colors.redHe01e3c};
       `;
-    case "primary":
+    case 'primary':
       return css`
         background-color: #096563;
         border: solid 1px #096563;
         color: ${colors.whiteHfff};
         transition: 0.2s;
       `;
-    case "danger":
+    case 'danger':
       return css`
         background-color: ${colors.redHe00c2d};
         border: solid 1px ${colors.redHe00c2d};
         color: ${colors.whiteHfff};
         transition: 0.2s;
       `;
-    case "link":
+    case 'link':
       return css`
         background-color: transparent;
         border: solid 1px transparent;
         color: ${colors.blueH597eff};
         transition: 0.2s;
       `;
-    case "grey":
+    case 'grey':
       return css`
         background-color: ${colors.greyH7a7a7a};
         border: solid 1px ${colors.greyH7a7a7a};
         color: ${colors.blackH2d2d2d};
         transition: 0.2s;
       `;
-    case "blue":
+    case 'blue':
       return css`
         background-color: ${colors.blueH597eff};
         border: solid 1px ${colors.blueH597eff};
@@ -147,10 +145,10 @@ const defaultStyle = (props) => {
   }
 };
 
-const hoverStyle = (props) => {
+const hoverStyle = props => {
   const isClickable = !(props.disabled || props.isLoading);
   switch (props.theme) {
-    case "black":
+    case 'black':
       return css`
         text-decoration: none;
         ${isClickable
@@ -160,7 +158,7 @@ const hoverStyle = (props) => {
           `
           : null}
       `;
-    case "black-outline":
+    case 'black-outline':
       return css`
         text-decoration: none;
         ${isClickable
@@ -171,7 +169,7 @@ const hoverStyle = (props) => {
           `
           : null}
       `;
-    case "red":
+    case 'red':
       return css`
         text-decoration: none;
         ${isClickable
@@ -181,7 +179,7 @@ const hoverStyle = (props) => {
           `
           : null}
       `;
-    case "red-hanbitco":
+    case 'red-hanbitco':
       return css`
         text-decoration: none;
         ${isClickable
@@ -191,7 +189,7 @@ const hoverStyle = (props) => {
           `
           : null}
       `;
-    case "red-outline":
+    case 'red-outline':
       return css`
         text-decoration: none;
         ${isClickable
@@ -202,7 +200,7 @@ const hoverStyle = (props) => {
           `
           : null}
       `;
-    case "primary":
+    case 'primary':
       return css`
         text-decoration: none;
         ${isClickable
@@ -212,7 +210,7 @@ const hoverStyle = (props) => {
           `
           : null}
       `;
-    case "danger":
+    case 'danger':
       return css`
         text-decoration: none;
         ${isClickable
@@ -222,14 +220,14 @@ const hoverStyle = (props) => {
           `
           : null}
       `;
-    case "link":
+    case 'link':
       return css`
         text-decoration: underline;
         color: ${colors.blackH2f2f2f};
         background-color: transparent;
         border-color: transparent;
       `;
-    case "grey":
+    case 'grey':
       return css`
         text-decoration: none;
         ${isClickable
@@ -239,7 +237,7 @@ const hoverStyle = (props) => {
         `
           : null}
       `;
-    case "blue":
+    case 'blue':
       return css`
         text-decoration: none;
         ${isClickable
@@ -262,55 +260,53 @@ const hoverStyle = (props) => {
   }
 };
 
-const activeStyle = (props) => {
+const activeStyle = props => {
   switch (props.theme) {
-    case "black":
+    case 'black':
       return css`
         text-decoration: none;
-        background-color: ${props.disabled ? "#3E4044" : "#131416"};
-        border-color: ${props.disabled ? "#3E4044" : "#131416"};
-        color: ${props.disabled ? "#717379" : "#E01E3C"};
+        background-color: ${props.disabled ? '#3E4044' : '#131416'};
+        border-color: ${props.disabled ? '#3E4044' : '#131416'};
+        color: ${props.disabled ? '#717379' : '#E01E3C'};
       `;
-    case "black-outline":
+    case 'black-outline':
       return css`
         text-decoration: none;
-        background-color: ${props.disabled ? "#777" : "#444"};
-        border-color: ${props.disabled ? "#777" : "#444"};
+        background-color: ${props.disabled ? '#777' : '#444'};
+        border-color: ${props.disabled ? '#777' : '#444'};
       `;
-    case "red":
+    case 'red':
       return css`
-        background-color: ${props.disabled
-          ? colors.redHeea7b2
-          : colors.redHe01e3c};
+        background-color: ${props.disabled ? colors.redHeea7b2 : colors.redHe01e3c};
         border-color: ${props.disabled ? colors.redHeea7b2 : colors.redHe01e3c};
       `;
-    case "red-outline":
+    case 'red-outline':
       return css`
-        background-color: ${props.disabled ? colors.redB : "inherit"};
+        background-color: ${props.disabled ? colors.redB : 'inherit'};
         border-color: ${props.disabled ? colors.redB : colors.redA};
       `;
-    case "primary":
+    case 'primary':
       return css`
-        background-color: ${props.disabled ? "#096563" : "#064241"};
-        border-color: ${props.disabled ? "#096563" : "#053635"};
+        background-color: ${props.disabled ? '#096563' : '#064241'};
+        border-color: ${props.disabled ? '#096563' : '#053635'};
       `;
-    case "danger":
+    case 'danger':
       return css`
-        background-color: ${props.disabled ? "#E94B00" : ""};
-        border-color: ${props.disabled ? "#E94B00" : `${colors.redHfffbfc}`};
+        background-color: ${props.disabled ? '#E94B00' : ''};
+        border-color: ${props.disabled ? '#E94B00' : `${colors.redHfffbfc}`};
       `;
-    case "link":
+    case 'link':
       return css`
         color: #031f1e;
         background-color: transparent;
         border-color: transparent;
       `;
-    case "grey":
+    case 'grey':
       return css`
         text-decoration: none;
-        background-color: ${props.disabled ? "#3E4044" : "#6a7076"};
-        border-color: ${props.disabled ? "#3E4044" : "#6a7076"};
-        color: ${props.disabled ? "#717379" : "#26282d"};
+        background-color: ${props.disabled ? '#3E4044' : '#6a7076'};
+        border-color: ${props.disabled ? '#3E4044' : '#6a7076'};
+        color: ${props.disabled ? '#717379' : '#26282d'};
       `;
     default:
       return css`
@@ -319,45 +315,45 @@ const activeStyle = (props) => {
   }
 };
 
-const focusStyle = (props) => {
+const focusStyle = props => {
   switch (props.theme) {
-    case "black":
+    case 'black':
       return css`
         text-decoration: none;
         box-shadow: 0 0 0 0.2rem rgba(#777, 0.5);
         outline: 0;
       `;
-    case "black-outline":
+    case 'black-outline':
       return css`
         text-decoration: none;
         box-shadow: 0 0 0 0.2rem rgba(#777, 0.5);
         outline: 0;
       `;
-    case "red":
-    case "red-outline":
+    case 'red':
+    case 'red-outline':
       return css`
         text-decoration: none;
         outline: 0;
       `;
-    case "primary":
+    case 'primary':
       return css`
         text-decoration: none;
         box-shadow: 0 0 0 0.2rem rgba(9, 101, 99, 0.5);
         outline: 0;
       `;
-    case "danger":
+    case 'danger':
       return css`
         text-decoration: none;
         box-shadow: 0 0 0 0.2rem rgba(233, 75, 0, 0.5);
         outline: 0;
       `;
-    case "link":
+    case 'link':
       return css`
         text-decoration: underline;
         box-shadow: none;
         outline: 0;
       `;
-    case "grey":
+    case 'grey':
       return css`
         text-decoration: none;
         box-shadow: 0 0 0 0.2rem rgba(#777, 0.5);
@@ -376,8 +372,8 @@ export const StyledButton = styled.button`
   text-align: center;
   user-select: none;
   white-space: nowrap;
-  cursor: ${(props) => (props.disabled ? "not-allowed" : "pointer")};
-  opacity: ${(props) => (props.disabled ? "0.65" : null)};
+  cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
+  opacity: ${props => (props.disabled ? '0.65' : null)};
   border-radius: 4px;
 
   ${fontSize}
@@ -406,5 +402,5 @@ export const InnerDiv = styled.div`
   align-items: center;
   justify-content: center;
 
-  ${(props) => props.innerStyle}
+  ${props => props.innerStyle}
 `;

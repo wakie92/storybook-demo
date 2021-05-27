@@ -1,8 +1,8 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Spinner } from "reactstrap";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { Spinner } from 'reactstrap';
 
-import { StyledButton, InnerDiv } from "./styled";
+import { StyledButton, InnerDiv } from './styled';
 
 const BulldaxButton = ({
   buttonStyle,
@@ -30,11 +30,7 @@ const BulldaxButton = ({
       type={type}
     >
       <InnerDiv innerStyle={innerStyle}>
-        {isLoading ? (
-          <Spinner type={spinnerType} size={spinnerSize} />
-        ) : (
-          children
-        )}
+        {isLoading ? <Spinner type={spinnerType} size={spinnerSize} /> : children}
       </InnerDiv>
     </StyledButton>
   );
@@ -63,11 +59,11 @@ BulldaxButton.defaultProps = {
   innerStyle: null,
   isLoading: false,
   onClick: () => {},
-  size: "",
-  spinnerSize: "sm",
-  spinnerType: "border",
-  theme: "",
-  type: "button",
+  size: '',
+  spinnerSize: 'sm',
+  spinnerType: 'border',
+  theme: '',
+  type: 'button',
 };
 
 export default BulldaxButton;
