@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/stories/*": ["src/stories/*"],
+      "@/styles/*": ["src/styles/*"],
+    }
+  }
+}

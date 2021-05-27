@@ -1,54 +1,45 @@
-import styled, { css } from "styled-components";
-import { animated } from "react-spring";
+import { Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
+import styled from "styled-components";
 
-export const fullscreen = css`
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+import OrgButton from "../BulldaxButton/BulldaxButton";
+
+export const ModalButton = styled(OrgButton)`
+  position: relative;
 `;
 
-export const darkLayer = css`
-  z-index: 10;
-  background: rgba(0, 0, 0, 0.5);
+export const ModalWrapper = styled(Modal)`
+  max-width: ${({ isBigModal }) => isBigModal && "700px"};
 `;
 
-export const whiteBoxWrapper = css`
-  z-index: 15;
+export const ModalHeaderWrapper = styled(ModalHeader)`
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-`;
 
-export const FullDarkLayer = styled(animated.div)`
-  ${fullscreen}
-  ${darkLayer}
-`;
+  > button {
+    display: ${({ hideCloseBtn }) => (hideCloseBtn ? "none" : "block")};
+    font-size: 18px;
+    font-weight: normal;
+    color: ${({ theme }) => theme.textPrimary};
 
-export const ModalWrapper = styled(animated.div)`
-  ${fullscreen}
-  ${whiteBoxWrapper}
-`;
-
-export const WhiteBox = styled.div`
-  box-sizing: border-box;
-  border-radius: 4px;
-  width: 25rem;
-  background: white;
-  box-shadow: 0px 4px 8px 8px rgba(0, 0, 0, 0.05);
-  padding: 2rem;
-
-  h3 {
-    font-size: 1.5rem;
-    color: #343a40;
-    margin-top: 0;
-    margin-bottom: 1rem;
+    &:hover {
+      color: ${({ theme }) => theme.textSecondary};
+    }
   }
+`;
 
-  p {
-    font-size: 1.125rem;
-    margin: 0;
-    color: #868e96;
-  }
+export const ModalBodyWrapper = styled(ModalBody)`
+  border: none;
+`;
+
+export const ModalFooterWrapper = styled(ModalFooter)`
+  border: none;
+`;
+
+export const ButtonBlock = styled.div`
+  width: 100%;
+`;
+
+export const Button = styled(OrgButton)`
+  position: relative;
 `;
