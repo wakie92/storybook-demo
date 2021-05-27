@@ -1,23 +1,20 @@
-import React from "react";
-import ButtonGroup from "./ButtonGroup";
-import Button from "../Button/Button";
-import { withKnobs, text, radios, boolean } from "@storybook/addon-knobs";
+import React from 'react';
+import { withKnobs, text, radios, boolean } from '@storybook/addon-knobs';
+
+import Button from 'src/stories/BulldaxButton/BulldaxButton';
+import ButtonGroup from './ButtonGroup';
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
-  title: "Theme|Basic/ButtonGroup",
+  title: 'Theme|Basic/ButtonGroup',
   component: ButtonGroup,
   decorators: [withKnobs],
 };
 
 export const buttonGroup = () => {
-  const direction = radios(
-    "direction",
-    { Row: "row", Column: "column" },
-    "row"
-  );
-  const rightAlign = boolean("rightAlign", false);
-  const gap = text("gap", "0.5rem");
+  const direction = radios('direction', { Row: 'row', Column: 'column' }, 'row');
+  const rightAlign = boolean('rightAlign', false);
+  const gap = text('gap', '0.5rem');
 
   return (
     <ButtonGroup direction={direction} rightAlign={rightAlign} gap={gap}>
@@ -28,7 +25,7 @@ export const buttonGroup = () => {
 };
 
 buttonGroup.story = {
-  name: "Default",
+  name: 'Default',
 };
 
 export const rightAlign = () => {

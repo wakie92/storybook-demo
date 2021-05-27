@@ -1,18 +1,11 @@
-import PropTypes from "prop-types";
-import { ButtonGroupWrapper } from "./styled";
+import PropTypes from 'prop-types';
+import { ButtonGroupWrapper } from './styled';
 
 /**
  * Use `ButtonGroup` component to show multiple `Button` components or to align buttons to the right.
  */
 
-const ButtonGroup = ({
-  direction,
-  rightAlign,
-  gap,
-  children,
-  customStyle,
-  className,
-}) => {
+const ButtonGroup = ({ direction, rightAlign, gap, children, customStyle, className }) => {
   return (
     <ButtonGroupWrapper
       flexDirection={direction}
@@ -28,7 +21,7 @@ const ButtonGroup = ({
 
 ButtonGroup.propTypes = {
   /** Direction to show buttons */
-  direction: PropTypes.oneOf(["row", "column"]).isRequired,
+  direction: PropTypes.oneOf(['row', 'column']),
   /** Show button to right. */
   rightAlign: PropTypes.bool,
   /** Sets the distance between the button and buttons. */
@@ -41,10 +34,11 @@ ButtonGroup.propTypes = {
 };
 
 ButtonGroup.defaultProps = {
-  direction: "row",
-  gap: "0.5rem",
+  direction: 'row',
+  gap: '0.5rem',
   rightAlign: false,
   customStyle: null,
+  className: null,
 };
 
 export default ButtonGroup;

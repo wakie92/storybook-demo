@@ -96,6 +96,8 @@ module.exports = {
         extensions: ['.js', '.jsx'],
       },
     ],
+    'react/react-in-jsx-scope': 0,
+    'import/no-extraneous-dependencies': 0,
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
   },
