@@ -3,7 +3,7 @@
     "baseUrl": ".",
     "paths": {
       "@/stories/*": ["src/stories/*"],
-      "@/styles/*": ["src/styles/*"],
+      "@/styles/*": ["src/styles/*"]
     }
   }
 }

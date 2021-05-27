@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { colors } from "../../styles/theme";
+import { colors } from '../../styles/theme';
 
 export const CheckContainer = styled.div`
   width: 100%;
@@ -9,7 +9,7 @@ export const CheckContainer = styled.div`
   align-items: flex-start;
 
   &:hover {
-    cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
+    cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
   }
   ${({ containerStyle }) => containerStyle}
 `;

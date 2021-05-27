@@ -1,29 +1,30 @@
-import { withKnobs, boolean, text } from "@storybook/addon-knobs";
+import { withKnobs, boolean, text } from '@storybook/addon-knobs';
 
-import BulldaxCheckBox from "./BulldaxCheckBox";
-import { colors } from "../../styles/theme";
+import BulldaxCheckBox from './BulldaxCheckBox';
+import { colors } from '../../styles/theme';
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
-  title: "Theme|Basic/BulldaxCheckBox",
+  title: 'Theme|Basic/BulldaxCheckBox',
   parameters: {
-    componentSubtitle: "CheckBox Component",
+    componentSubtitle: 'CheckBox Component',
   },
   decorators: [withKnobs],
   component: BulldaxCheckBox,
 };
 
 export const bulldaxCheckBox = () => {
-  const isRound = boolean("isRound", false);
-  const id = text("id", "default");
-  const checkedDefault = boolean("checkedDefault", false);
-  const disabled = boolean("disabled", false);
-  const containerStyle = text("containerStyle", "");
-  const labelStyle = text("labetStyle", "");
-  const checkBoxStyle = text("checkBoxStyle", "");
-  const label = text("children", "CHECK BOX");
+  const isRound = boolean('isRound', false);
+  const id = text('id', 'default');
+  const checkedDefault = boolean('checkedDefault', false);
+  const disabled = boolean('disabled', false);
+  const containerStyle = text('containerStyle', '');
+  const labelStyle = text('labetStyle', '');
+  const checkBoxStyle = text('checkBoxStyle', '');
+  const label = text('children', 'CHECK BOX');
   const handleClick = () => {
-    alert("click");
+    // eslint-disable-next-line no-alert
+    alert('click');
   };
   return (
     <>
@@ -80,7 +81,7 @@ export const bulldaxCheckBox = () => {
 };
 
 bulldaxCheckBox.story = {
-  name: "Default",
+  name: 'Default',
 };
 
 export const roundCheckbox = () => {
@@ -109,11 +110,7 @@ export const customColorCheckbox = () => {
       >
         ROUND CHECK BOX
       </BulldaxCheckBox>
-      <BulldaxCheckBox
-        id="round"
-        isRound
-        checkBoxStyle={`background-color: ${colors.redHeea7b2}`}
-      >
+      <BulldaxCheckBox id="round" isRound checkBoxStyle={`background-color: ${colors.redHeea7b2}`}>
         ROUND CHECK BOX
       </BulldaxCheckBox>
       <BulldaxCheckBox

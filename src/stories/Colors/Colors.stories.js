@@ -1,12 +1,12 @@
-import Colors from "./Colors";
-import { colorsCollection } from "./colorsCollection";
-import { ColorsWrapper } from "./styled";
+import Colors from './Colors';
+import colorsCollection from './colorsCollection';
+import { ColorsWrapper } from './styled';
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
-  title: "Theme|Basic/Colors",
+  title: 'Theme|Basic/Colors',
   parameters: {
-    componentSubtitle: "Button component",
+    componentSubtitle: 'Button component',
   },
   component: Colors,
 };
@@ -16,7 +16,7 @@ export const colors = () => {
 
   return (
     <ColorsWrapper>
-      {colorsValue.map((color) => (
+      {colorsValue.map(color => (
         <Colors key={color} bgColor={color} />
       ))}
     </ColorsWrapper>
@@ -24,17 +24,15 @@ export const colors = () => {
 };
 
 colors.story = {
-  name: "Default",
+  name: 'Default',
 };
 
 export const BlackColors = () => {
-  const blackColors = Object.keys(colorsCollection).filter((color) =>
-    color.includes("black")
-  );
+  const blackColors = Object.keys(colorsCollection).filter(color => color.includes('black'));
 
   return (
     <ColorsWrapper>
-      {blackColors.map((color) => (
+      {blackColors.map(color => (
         <Colors key={color} bgColor={colorsCollection[color]} />
       ))}
     </ColorsWrapper>
@@ -42,13 +40,11 @@ export const BlackColors = () => {
 };
 
 export const BlueColors = () => {
-  const blueColors = Object.keys(colorsCollection).filter((color) =>
-    color.includes("blue")
-  );
+  const blueColors = Object.keys(colorsCollection).filter(color => color.includes('blue'));
 
   return (
     <ColorsWrapper>
-      {blueColors.map((color) => (
+      {blueColors.map(color => (
         <Colors key={color} bgColor={colorsCollection[color]} />
       ))}
     </ColorsWrapper>
@@ -56,13 +52,11 @@ export const BlueColors = () => {
 };
 
 export const GreenColors = () => {
-  const greenColors = Object.keys(colorsCollection).filter((color) =>
-    color.includes("green")
-  );
+  const greenColors = Object.keys(colorsCollection).filter(color => color.includes('green'));
 
   return (
     <ColorsWrapper>
-      {greenColors.map((color) => (
+      {greenColors.map(color => (
         <Colors key={color} bgColor={colorsCollection[color]} />
       ))}
     </ColorsWrapper>
@@ -70,13 +64,11 @@ export const GreenColors = () => {
 };
 
 export const GreyColors = () => {
-  const greyColors = Object.keys(colorsCollection).filter((color) =>
-    color.includes("grey")
-  );
+  const greyColors = Object.keys(colorsCollection).filter(color => color.includes('grey'));
 
   return (
     <ColorsWrapper>
-      {greyColors.map((color) => (
+      {greyColors.map(color => (
         <Colors key={color} bgColor={colorsCollection[color]} />
       ))}
     </ColorsWrapper>
@@ -84,13 +76,13 @@ export const GreyColors = () => {
 };
 
 export const LightBlueColors = () => {
-  const lightBlueColors = Object.keys(colorsCollection).filter((color) =>
-    color.includes("lightBlue")
+  const lightBlueColors = Object.keys(colorsCollection).filter(color =>
+    color.includes('lightBlue'),
   );
 
   return (
     <ColorsWrapper>
-      {lightBlueColors.map((color) => (
+      {lightBlueColors.map(color => (
         <Colors key={color} bgColor={colorsCollection[color]} />
       ))}
     </ColorsWrapper>
@@ -98,13 +90,11 @@ export const LightBlueColors = () => {
 };
 
 export const RedColors = () => {
-  const redColors = Object.keys(colorsCollection).filter((color) =>
-    color.includes("red")
-  );
+  const redColors = Object.keys(colorsCollection).filter(color => color.includes('red'));
 
   return (
     <ColorsWrapper>
-      {redColors.map((color) => (
+      {redColors.map(color => (
         <Colors key={color} bgColor={colorsCollection[color]} />
       ))}
     </ColorsWrapper>
@@ -112,13 +102,11 @@ export const RedColors = () => {
 };
 
 export const WhiteColors = () => {
-  const whiteColors = Object.keys(colorsCollection).filter((color) =>
-    color.includes("white")
-  );
+  const whiteColors = Object.keys(colorsCollection).filter(color => color.includes('white'));
 
   return (
     <ColorsWrapper>
-      {whiteColors.map((color) => (
+      {whiteColors.map(color => (
         <Colors key={color} bgColor={colorsCollection[color]} />
       ))}
     </ColorsWrapper>

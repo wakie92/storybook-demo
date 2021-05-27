@@ -1,11 +1,11 @@
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
-import { ColorDiv, ColorCard, ColorLabel } from "./styled";
+import { ColorDiv, ColorCard, ColorLabel } from './styled';
 
 const Colors = ({ bgColor }) => {
   return (
     <ColorCard bgColor={bgColor}>
-      <ColorDiv bgColor={bgColor}></ColorDiv>
+      <ColorDiv bgColor={bgColor} />
       <ColorLabel>{bgColor}</ColorLabel>
     </ColorCard>
   );

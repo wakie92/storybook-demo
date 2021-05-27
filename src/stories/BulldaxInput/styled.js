@@ -1,11 +1,11 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { colors } from "../../styles/theme";
-import { TextSmall } from "../../styles/styledComponents/textStyled";
+import { colors } from '../../styles/theme';
+import { TextSmall } from '../../styles/styledComponents/textStyled';
 
 export const Container = styled.div`
   width: 100%;
-  min-height: ${({ hasLabel }) => (hasLabel ? "72px" : "52px")};
+  min-height: ${({ hasLabel }) => (hasLabel ? '72px' : '52px')};
   position: relative;
   margin: 7px 0;
 
@@ -31,9 +31,7 @@ export const Input = styled.input`
   outline: none;
   transition: border 0.5s ease;
   background: ${({ disabled, theme }) =>
-    disabled
-      ? theme.colors.bckground.inputDisabled
-      : theme.colors.bckground.input};
+    disabled ? theme.colors.bckground.inputDisabled : theme.colors.bckground.input};
   border: 1px solid
     ${({ invalid, theme, value }) =>
       String(value).length <= 0
@@ -55,19 +53,19 @@ export const Input = styled.input`
       : `
     width: 100%;
     padding: 11px 0 11px 15px;
-    padding-right: ${type === "password" ? "4.25rem" : "2.125rem"} !important;
+    padding-right: ${type === 'password' ? '4.25rem' : '2.125rem'} !important;
     box-sizing: border-box;
   `}
 
   color: ${({ theme }) => theme.colors.text.secondary};
   font-size: 14px;
 
-  ${({ disabled }) => (disabled ? `cursor: not-allowed;` : "")};
+  ${({ disabled }) => (disabled ? `cursor: not-allowed;` : '')};
 `;
 
 export const ValidLabel = styled.label`
   color: #28a745 !important;
-  display: ${({ value }) => (String(value).length > 0 ? "inherit" : "none")};
+  display: ${({ value }) => (String(value).length > 0 ? 'inherit' : 'none')};
   margin: 5px 0 0;
   font-size: 12px;
 
@@ -81,7 +79,7 @@ export const ValidLabel = styled.label`
 
 export const InvalidLabel = styled.label`
   color: #e01e3c !important;
-  display: ${({ value }) => (String(value).length > 0 ? "inherit" : "none")};
+  display: ${({ value }) => (String(value).length > 0 ? 'inherit' : 'none')};
   margin: 5px 0 0;
   font-size: 12px;
 
@@ -107,9 +105,7 @@ export const FaContainer = styled.div`
 `;
 
 export const FaEye = styled.i.attrs(({ inputType }) => ({
-  className: `fa fa-eye${
-    inputType === "password" ? "-slash" : ""
-  } cursor-pointer`,
+  className: `fa fa-eye${inputType === 'password' ? '-slash' : ''} cursor-pointer`,
 }))`
   padding-left: 0.5rem;
   color: ${({ theme }) => theme.colors.text.secondary};
@@ -120,13 +116,13 @@ export const FaEye = styled.i.attrs(({ inputType }) => ({
 `;
 
 export const FaValidInput = styled.i.attrs(() => ({
-  className: "fa fa-check-circle cursor-pointer",
+  className: 'fa fa-check-circle cursor-pointer',
 }))`
   color: ${colors.greenH04e77f};
 `;
 
 export const FaInvalidInput = styled.i.attrs(() => ({
-  className: "fa fa-exclamation-circle cursor-pointer",
+  className: 'fa fa-exclamation-circle cursor-pointer',
 }))`
   color: ${colors.redHe01e3c};
 `;
@@ -135,9 +131,7 @@ export const InputAppend = styled.div`
   width: 15%;
   height: 100%;
   background: ${({ disabled, theme }) =>
-    disabled
-      ? theme.colors.bckground.inputDisabled
-      : theme.colors.bckground.input};
+    disabled ? theme.colors.bckground.inputDisabled : theme.colors.bckground.input};
   padding: 11px 0 11px 15px;
 
   border: 1px solid

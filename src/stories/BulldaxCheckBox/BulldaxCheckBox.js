@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
-import PropTypes from "prop-types";
+import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 
-import { CheckContainer, CheckBox, CheckBoxLabel } from "./styled";
+import { CheckContainer, CheckBox, CheckBoxLabel } from './styled';
 
 const OrgCheckBox = ({
   checkBoxStyle,
@@ -57,31 +57,15 @@ OrgCheckBox.defaultProps = {
 };
 
 OrgCheckBox.propTypes = {
-  checkBoxStyle: PropTypes.oneOfType([
-    PropTypes.shape([]),
-    PropTypes.shape({}),
-    PropTypes.node,
-  ]),
+  checkBoxStyle: PropTypes.oneOfType([PropTypes.shape([]), PropTypes.shape({}), PropTypes.node]),
   checkedDefault: PropTypes.bool,
-  children: PropTypes.oneOfType([
-    PropTypes.shape([]),
-    PropTypes.shape({}),
-    PropTypes.node,
-  ]),
-  containerStyle: PropTypes.oneOfType([
-    PropTypes.shape([]),
-    PropTypes.shape({}),
-    PropTypes.node,
-  ]),
+  children: PropTypes.oneOfType([PropTypes.shape([]), PropTypes.shape({}), PropTypes.node]),
+  containerStyle: PropTypes.oneOfType([PropTypes.shape([]), PropTypes.shape({}), PropTypes.node]),
   disabled: PropTypes.bool,
   handleClick: PropTypes.func,
   id: PropTypes.string.isRequired,
   isRound: PropTypes.bool,
-  labelStyle: PropTypes.oneOfType([
-    PropTypes.shape([]),
-    PropTypes.shape({}),
-    PropTypes.node,
-  ]),
+  labelStyle: PropTypes.oneOfType([PropTypes.shape([]), PropTypes.shape({}), PropTypes.node]),
 };
 
 export default OrgCheckBox;

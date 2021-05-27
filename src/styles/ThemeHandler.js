@@ -1,11 +1,11 @@
-import React, { useContext, useEffect, useState } from "react";
-import PropTypes from "prop-types";
-import { ThemeProvider } from "styled-components";
-import { UiUxContext } from "../context/UiUxContext";
+import React, { useContext, useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
+import { ThemeProvider } from 'styled-components';
+import { UiUxContext } from '../context/UiUxContext';
 
-import darkTheme from "./darkTheme";
-import lightTheme from "./lightTheme";
-import { dark, supportedUIthemes } from "./theme";
+import darkTheme from './darkTheme';
+import lightTheme from './lightTheme';
+import { dark, supportedUIthemes } from './theme';
 
 const ThemeHandler = ({ children }) => {
   const { uiTheme } = useContext(UiUxContext);
@@ -17,19 +17,11 @@ const ThemeHandler = ({ children }) => {
     }
   }, [uiTheme]);
 
-  return (
-    <ThemeProvider theme={theme === dark ? darkTheme : lightTheme}>
-      {children}
-    </ThemeProvider>
-  );
+  return <ThemeProvider theme={theme === dark ? darkTheme : lightTheme}>{children}</ThemeProvider>;
 };
 
 ThemeHandler.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.shape([]),
-    PropTypes.shape({}),
-    PropTypes.node,
-  ]),
+  children: PropTypes.oneOfType([PropTypes.shape([]), PropTypes.shape({}), PropTypes.node]),
 };
 
 ThemeHandler.defaultProps = {

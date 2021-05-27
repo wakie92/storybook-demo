@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
 import {
   Container,
@@ -13,7 +13,7 @@ import {
   InputWrapper,
   InvalidLabel,
   ValidLabel,
-} from "./styled";
+} from './styled';
 
 const BulldaxInput = ({
   appendLabel,
@@ -33,11 +33,11 @@ const BulldaxInput = ({
   validLabel,
   value,
 }) => {
-  const [inputType, setInputType] = useState(type || "text");
+  const [inputType, setInputType] = useState(type || 'text');
 
   // Only use for password input type to toggle input to text
   const togglePasswordType = () => {
-    setInputType(inputType === "password" ? "text" : "password");
+    setInputType(inputType === 'password' ? 'text' : 'password');
   };
 
   const iconValidationInputs =
@@ -47,37 +47,30 @@ const BulldaxInput = ({
       <FaValidInput key="FaValidInput" aria-hidden="true" />
     );
   const inputInnerContent =
-    name === "code" ? null : type === "password" ? (
+    name === 'code' ? null : type === 'password' ? (
       <FaContainer key={`type${name}_${type}`}>
         {iconValidationInputs}
-        <FaEye
-          key="FaEye"
-          inputType={inputType}
-          onClick={togglePasswordType}
-          aria-hidden="true"
-        />
+        <FaEye key="FaEye" inputType={inputType} onClick={togglePasswordType} aria-hidden="true" />
       </FaContainer>
     ) : (
-      <FaContainer key={`type${name}_${type}`}>
-        {iconValidationInputs}
-      </FaContainer>
+      <FaContainer key={`type${name}_${type}`}>{iconValidationInputs}</FaContainer>
     );
 
   return (
     <Container
       containerStyle={containerStyle}
-      hasLabel={inputLabelText !== ""}
+      hasLabel={inputLabelText !== ''}
       invalid={isInvalid}
       value={value}
     >
-      {inputLabelText !== "" ? <InputLabel>{inputLabelText}</InputLabel> : null}
+      {inputLabelText !== '' ? <InputLabel>{inputLabelText}</InputLabel> : null}
       <InputWrapper>
         <InputNode
           autoComplete={autoComplete}
           className={className}
           disabled={disabled}
           invalid={isInvalid}
-          hasAppend={appendLabel !== ""}
+          hasAppend={appendLabel !== ''}
           key={key}
           name={name}
           onChange={onChange}
@@ -85,8 +78,8 @@ const BulldaxInput = ({
           required={required}
           type={inputType}
           value={value}
-        />{" "}
-        {appendLabel !== "" ? (
+        />{' '}
+        {appendLabel !== '' ? (
           <InputAppend disabled={disabled} invalid={isInvalid}>
             {appendLabel}
           </InputAppend>
@@ -98,19 +91,13 @@ const BulldaxInput = ({
         ? [
             inputInnerContent,
             invalidLabel ? (
-              <InvalidLabel key={`${name}-${invalidLabel}`}>
-                {invalidLabel}
-              </InvalidLabel>
+              <InvalidLabel key={`${name}-${invalidLabel}`}>{invalidLabel}</InvalidLabel>
             ) : null,
           ]
         : !isInvalid
         ? [
             inputInnerContent,
-            validLabel ? (
-              <ValidLabel key={`${name}-${validLabel}`}>
-                {validLabel}
-              </ValidLabel>
-            ) : null,
+            validLabel ? <ValidLabel key={`${name}-${validLabel}`}>{validLabel}</ValidLabel> : null,
           ]
         : inputInnerContent}
     </Container>
@@ -121,11 +108,7 @@ BulldaxInput.propTypes = {
   appendLabel: PropTypes.string,
   autoComplete: PropTypes.string,
   className: PropTypes.string,
-  containerStyle: PropTypes.oneOfType([
-    PropTypes.shape([]),
-    PropTypes.shape({}),
-    PropTypes.node,
-  ]),
+  containerStyle: PropTypes.oneOfType([PropTypes.shape([]), PropTypes.shape({}), PropTypes.node]),
   disabled: PropTypes.bool,
   inputLabelText: PropTypes.string,
   invalidLabel: PropTypes.node,
@@ -141,20 +124,20 @@ BulldaxInput.propTypes = {
 };
 
 BulldaxInput.defaultProps = {
-  appendLabel: "",
-  autoComplete: "on",
-  className: "",
+  appendLabel: '',
+  autoComplete: 'on',
+  className: '',
   containerStyle: null,
   disabled: false,
-  inputLabelText: "",
+  inputLabelText: '',
   invalidLabel: null,
   isInvalid: false,
   key: null,
-  name: "",
+  name: '',
   onChange: () => {},
-  placeholder: "",
+  placeholder: '',
   required: false,
-  type: "text",
+  type: 'text',
   validLabel: null,
   value: undefined,
 };

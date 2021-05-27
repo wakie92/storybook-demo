@@ -8,15 +8,15 @@ import {
   TextSmall,
   TextSmaller,
   TextBadge,
-} from "../../styles/styledComponents/textStyled";
-import BulldaxText from "./BulldaxText";
-import mdx from "./BulldaxText.mdx";
+} from '../../styles/styledComponents/textStyled';
+import BulldaxText from './BulldaxText';
+import mdx from './BulldaxText.mdx';
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
-  title: "Theme|Basic/Text",
+  title: 'Theme|Basic/Text',
   parameters: {
-    componentSubtitle: "CheckBox Component",
+    componentSubtitle: 'CheckBox Component',
     docs: {
       page: mdx,
     },
@@ -59,5 +59,5 @@ export const bulldaxText = () => {
 };
 
 bulldaxText.story = {
-  name: "Default",
+  name: 'Default',
 };

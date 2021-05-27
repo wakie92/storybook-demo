@@ -1,7 +1,7 @@
-import React, { createContext, Component } from "react";
-import PropTypes from "prop-types";
+import React, { createContext, Component } from 'react';
+import PropTypes from 'prop-types';
 
-import { dark, supportedUIthemes } from "../styles/theme";
+import { dark, supportedUIthemes } from '../styles/theme';
 
 export const UiUxContext = createContext();
 
@@ -15,7 +15,7 @@ class UiUxContextProvider extends Component {
       devicePixelRatio: 1,
       heightScreen: 1080,
       isMobile: false,
-      previousUrl: "",
+      previousUrl: '',
       uiTheme: dark,
       widthScreen: 1920,
     };
@@ -45,10 +45,7 @@ class UiUxContextProvider extends Component {
 }
 
 UiUxContextProvider.propTypes = {
-  children: PropTypes.oneOfType([
-    PropTypes.arrayOf(PropTypes.node),
-    PropTypes.node,
-  ]),
+  children: PropTypes.oneOfType([PropTypes.arrayOf(PropTypes.node), PropTypes.node]),
 };
 
 UiUxContextProvider.defaultProps = {
