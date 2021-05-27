@@ -5,7 +5,7 @@ import { withKnobs, text, radios, boolean } from "@storybook/addon-knobs";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
-  title: "components|basic/ButtonGroup",
+  title: "Theme|Basic/ButtonGroup",
   component: ButtonGroup,
   decorators: [withKnobs],
 };
