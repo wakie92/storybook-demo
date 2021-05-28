@@ -1,13 +1,12 @@
 {
   "name": "@wakie92/storybook-demo",
-  "version": "0.2.0",
+  "version": "0.2.3",
   "description": "Starter template to get up and running quickly with React and Storybook",
   "module": "dist/index.js",
   "author": "Chromatic <https://chromatic.com/>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/wakie92/storybook-demo.git",
-    "directory": "@wakie92/storybook-demo"
+    "url": "https://github.com/wakie92/storybook-demo"
   },
   "bugs": {
     "url": "https://github.com/chromaui/intro-storybook-react-template/issues"
@@ -16,14 +15,16 @@
     "/dist"
   ],
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/wakie92"
+    "registry": "https://npm.pkg.github.com/"
   },
   "license": "MIT",
-  "dependencies": {
+  "peerDependencies": {
     "bootstrap": "^4.6.0",
     "prop-types": "^15.7.2",
     "react-spring": "^9.0.0",
     "styled-components": "^5.2.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
@@ -86,8 +87,6 @@
     "prettier": "^2.2.1",
     "prettier-eslint": "^12.0.0",
     "prettier-eslint-cli": "^5.0.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
     "react-scripts": "4.0.1",
     "reactstrap": "^8.9.0",
     "rollup": "^2.40.0",
