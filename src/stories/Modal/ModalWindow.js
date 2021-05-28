@@ -1,8 +1,7 @@
-import React from "react";
-import { Spinner, ModalBody, ModalFooter } from "reactstrap";
-import PropTypes from "prop-types";
+import { Spinner, ModalBody, ModalFooter } from 'reactstrap';
+import PropTypes from 'prop-types';
 
-import { ModalButton, ModalWrapper, ModalHeaderWrapper } from "./styled";
+import { ModalButton, ModalWrapper, ModalHeaderWrapper } from './styled';
 
 const ModalWindow = ({
   isBigModal,
@@ -35,7 +34,7 @@ const ModalWindow = ({
                 disabled={disabled || isLoading}
                 onClick={onClick}
               >
-                {isLoading ? <Spinner size="sm" /> : "네"}
+                {isLoading ? <Spinner size="sm" /> : '네'}
               </ModalButton>
               <ModalButton theme={innerButtonTheme} onClick={handleToggle}>
                 아니오
@@ -72,6 +71,6 @@ ModalWindow.defaultProps = {
   isLoading: false,
   handleToggle: () => {},
   onClick: () => {},
-  innerButtonTheme: "black",
+  innerButtonTheme: 'black',
 };
 export default ModalWindow;

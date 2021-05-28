@@ -6,6 +6,7 @@ export const colors = {
   blackH2f2f2f: '#2f2f2f',
   blackH434343: '#434343',
   blackH2d2d2d: '#2d2d2d',
+  blackH1b1b2f: '#1b1b2f',
 
   blueH597eff: '#597eff',
   blueH4871ff: '#4871ff',
@@ -25,6 +26,12 @@ export const colors = {
   greyHc1c1c1: '#c1c1c1',
   greyHcacaca: '#cacaca',
   greyHe7e7e7: '#e7e7e7',
+  greyHedebef: '#EDEBEF',
+  greyHebebf1: '#EDEBF1',
+  greyH6c757d: '#6C757D',
+  greyH575e66: '#575e66',
+  greyHf9f9f9: '#f9f9f9',
+  greyHced4da: '#ced4da',
 
   lightBlueHa3b7ff: '#a3b7ff',
   lightBlueHfafbff: '#fafbff',
@@ -37,6 +44,11 @@ export const colors = {
   redHfffbfc: '#fffbfc',
   redHb41931: '#b41931',
   redHffefef: '#ffefef',
+  redHe43f5a: '#e43f5a',
+  redHf05454: '#f05454',
+
+  navyH162447: '#162447',
+  navyH1f4068: '#1f4068',
 
   whiteHfff: '#fff',
   whiteHf4f4f4: '#f4f4f4',

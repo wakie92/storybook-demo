@@ -1,5 +1,6 @@
+import { colors as colorsCollection } from 'src/styles/theme';
+
 import Colors from './Colors';
-import colorsCollection from './colorsCollection';
 import { ColorsWrapper } from './styled';
 
 // eslint-disable-next-line import/no-anonymous-default-export

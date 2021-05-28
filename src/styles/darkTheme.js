@@ -15,6 +15,8 @@ export default {
     },
     text: {
       primary: colors.greyHd3d3d3,
+      secondary: colors.greyH9c9c9c,
+      input: colors.blackH2f2f2f,
     },
   },
 };

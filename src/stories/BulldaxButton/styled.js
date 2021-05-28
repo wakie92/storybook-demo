@@ -375,6 +375,7 @@ export const StyledButton = styled.button`
   cursor: ${props => (props.disabled ? 'not-allowed' : 'pointer')};
   opacity: ${props => (props.disabled ? '0.65' : null)};
   border-radius: 4px;
+  min-width: 50px;
 
   ${fontSize}
   ${height}
