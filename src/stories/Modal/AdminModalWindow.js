@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 import { ModalButton, ModalWrapper, ModalHeaderWrapper } from './styled';
 
-const ModalWindow = ({
+const AdminModalWindow = ({
   isBigModal,
   isOpen,
   modalHeaderTitle,
@@ -48,7 +48,7 @@ const ModalWindow = ({
   );
 };
 
-ModalWindow.propTypes = {
+AdminModalWindow.propTypes = {
   isBigModal: PropTypes.bool,
   children: PropTypes.node.isRequired,
   disabled: PropTypes.bool,
@@ -63,7 +63,7 @@ ModalWindow.propTypes = {
   innerButtonTheme: PropTypes.string,
 };
 
-ModalWindow.defaultProps = {
+AdminModalWindow.defaultProps = {
   isBigModal: false,
   disabled: false,
   footerButton: null,
@@ -74,4 +74,4 @@ ModalWindow.defaultProps = {
   onClick: () => {},
   innerButtonTheme: 'black',
 };
-export default ModalWindow;
+export default AdminModalWindow;

@@ -1,6 +1,6 @@
 import { withKnobs, text, boolean, select } from '@storybook/addon-knobs';
 
-import ModalWindow from './ModalWindow';
+import ModalWindow from './AdminModalWindow';
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
