@@ -1,3 +1,4 @@
+import React from 'react';
 import { Spinner, ModalBody, ModalFooter } from 'reactstrap';
 import PropTypes from 'prop-types';
 

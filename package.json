@@ -1,6 +1,6 @@
 {
   "name": "@wakie92/storybook-demo",
-  "version": "0.2.3",
+  "version": "0.2.5",
   "description": "Starter template to get up and running quickly with React and Storybook",
   "module": "dist/index.js",
   "author": "Chromatic <https://chromatic.com/>",
